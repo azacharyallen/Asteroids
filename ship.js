@@ -32,35 +32,15 @@ Ship.prototype.thrust = function(direction) {
   switch (direction) {
   case "left":
     this.vel[0] -= .5;
-    // if (key.isPressed("down")) {
-    //   this.vel[1] += .5;
-    // } else if (key.isPressed("up")) {
-    //     this.vel[1] -= .5;
-    // };
     break;
   case "right":
     this.vel[0] += .5;
-    // if (key.isPressed("down")) {
-    //   this.vel[1] += .5;
-    // } else if (key.isPressed("up")) {
-    //     this.vel[1] -= .5;
-    // };
     break;
   case "up":
     this.vel[1] -= .5;
-    // if (key.isPressed("left")) {
-    //   this.vel[0] -= .5;
-    // } else if (key.isPressed("right")) {
-    //     this.vel[0] += .5;
-    // };
     break;
   case "down":
     this.vel[1] += .5;
-    // if (key.isPressed("left")) {
-    //   this.vel[0] -= .5;
-    // } else if (key.isPressed("right")) {
-    //     this.vel[0] += .5;
-    // };
     break;
   case "stop":
     this.vel = [0,0];
