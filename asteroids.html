@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>ASTEROIDS!</title>
+</head>
+
+<body>
+  <h1 style="text-align:center">Asteroids</h1>
+  <div id="content" style="margin:auto; width:1280px; height:600px;">
+    <canvas style="border:5px solid #000000;"></canvas>
+  </div>
+
+  <script type="application/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+  </script>
+  <script type="application/javascript" src="moving_object.js"></script>
+  <script type="application/javascript" src="asteroid.js"></script>
+  <script type="application/javascript" src="game.js"></script>
+  <script type="application/javascript" src="ship.js"></script>
+  <script type="application/javascript" src="keymaster.js"></script>
+  <script type="application/javascript" src="bullets.js"></script>
+
+
+  <script>
+  alert("Move with WASD, rotate with LEFT and RIGHT, shoot with UP");
+
+  var canvas = document.getElementsByTagName("canvas")[0];
+  canvas.width = Asteroids.Game.DIM_X;
+  canvas.height = Asteroids.Game.DIM_Y;
+  var ctx = canvas.getContext("2d");
+  var game = new Asteroids.Game(ctx, 15);
+
+  ent = new Image();
+  ent.src = "./enterprise.png";
+  // game.bindKeyHandlers();
+  game.start();
+
+  </script>
+</body>
+</html>
